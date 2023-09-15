@@ -1,9 +1,6 @@
 from time import sleep, perf_counter
 from threading import Thread
 
-start = perf_counter()
-
-
 def show(name, delay):
     print(f"Starting {name} ...")
     sleep(delay)
@@ -29,5 +26,4 @@ t2.start()
 t1.join()
 t2.join()
 
-end = perf_counter()
-print(round(end - start))
+print("done...")

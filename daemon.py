@@ -1,8 +1,6 @@
-from time import sleep, perf_counter
-from threading import Thread
 import sys
-
-start = perf_counter()
+from threading import Thread
+from time import sleep
 
 
 def show(name):
@@ -21,6 +19,5 @@ t2.start()
 
 # t1.isDaemon()
 
-end = perf_counter()
-print(round(end - start))
+print("done...")
 sys.exit()

@@ -1,7 +1,5 @@
-from time import sleep, perf_counter
 from threading import Thread, current_thread, enumerate
-
-start = perf_counter()
+from time import sleep
 
 
 def show(name):
@@ -22,5 +20,4 @@ t2.start()
 t1.join()
 t2.join()
 
-end = perf_counter()
-print(round(end - start))
+print("done...")
