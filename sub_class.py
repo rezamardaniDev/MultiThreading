@@ -1,6 +1,7 @@
 from time import sleep, perf_counter
 from threading import Thread
 
+
 def show(name, delay):
     print(f"Starting {name} ...")
     sleep(delay)
