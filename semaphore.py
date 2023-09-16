@@ -15,6 +15,7 @@ def add():
     lock.release()
     # lock.release() ---> BoundedSemaphore
 
+
 t1 = Thread(target=add)
 t2 = Thread(target=add)
 t3 = Thread(target=add)
