@@ -2,7 +2,7 @@ from threading import Thread, Semaphore, current_thread, BoundedSemaphore
 from time import sleep
 
 num = 0
-lock = Semaphore(value=2)
+lock = Semaphore(value=1)
 b_lock = BoundedSemaphore(value=2)
 
 
@@ -13,8 +13,7 @@ def add():
     sleep(2)
     num += 1
     lock.release()
-    lock.release()
-
+    # lock.release() ---> BoundedSemaphore
 
 t1 = Thread(target=add)
 t2 = Thread(target=add)
